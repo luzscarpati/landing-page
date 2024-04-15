@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana;
+  background-color: rgba(223, 223, 223, 0.5);
+}
+#header {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  background-image: url('../img/servicios/podcast-audio-material-crear.webp');
+  background-color:#4d4e53;
+  height: 120px;
+  width:100%;
+  border-bottom: 3px solid rgb(19, 19, 19);
+  gap: 10px;
+}
+main {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header-img {
+  width: 250px;
+  margin-left: 10px;
+}
+#nav-bar {
+display: flex;
+align-items: center;
+height: 100%;
+margin-left: 8px;
+margin-right: 30px;
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  font-size: 1.2rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+.nav-link:hover {
+  cursor: poiner; 
+  color: black;
+}
+h1, h2 {
+ font-size: 1.5rem;
+ margin-top: 10px;
+ margin-bottom: 30px;
+ color: #013F4E;
+ text-align: center;
+}
+
+.mayor-video,
+.video-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin: 10px;
+}
+
+
+.up-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.p-content {
+  color: #013F4E;
+  font-size: 22px;
+  
+  text-align: center;
+}
+
+.video-list {
+  justify-content: space-between;
+  gap: 40px;
+}
+
+#features {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: rgba(1, 63, 78, 0.4);
+}
+.features-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  list-style: none;
+  padding-bottom: 15px;
+}
+.features-li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 28%;
+  text-align: center;
+  color: #013F4E;
+}
+
+#pricing {
+  width: 100%;
+
+}
+
+.pricing-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 98%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 0px 15px 0px 15px;
+  gap: 20px;
+  color: #013F4E;  
+  }
+
+.img-product {
+    width: 250px;;
+    height: 180px;
+    border-radius: 0px 15px 0px 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.651);
+}
+
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  color: #013F4E;
+}
+
+input {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    gap: 1em;
+  }
+  footer .redes__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 1em;
+  }
+  footer .img-redes {
+    border-radius: 50%;
+    width: 40px;
+  }
+  .img-redes:hover, .nav-ling {
+    box-shadow: 2px 2px 10px red, -2px -2px 10px blue;
+    filter: invert(1) hue-rotate(45deg);
+  }
+  hr {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 1px solid #4d4e53;
+    width: 60%
+  }
+
+@media only screen and (min-width: 550px) {
+  #video {width: 500px;
+  margin-bottom: 15px;
+
+  }
+}
