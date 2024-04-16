@@ -13,9 +13,6 @@ const transporter = createTransport({
 });
 
 const emailContact = (firstName, lastName, email) => {
-    console.log("FirstName  --  SERVICES EMAILCONTACT----", firstName);
-        console.log("lastName  --  SERVICES EMAILCONTACT----", lastName);
-        console.log("email  --  SERVICES EMAILCONTACT----", email)
     return (
         `<h3>${firstName} ${lastName}, quiere adquirir un servicio. Escribile a ${email}</h3>`
     )
@@ -23,9 +20,6 @@ const emailContact = (firstName, lastName, email) => {
 
 export const sendMailservice = async (firstName, lastName, email) => {
     try {
-        console.log("FirstName  --  SERVOCES SEMD,AILSERVICE----", firstName);
-        console.log("lastName  --  SERVOCES SEMD,AILSERVICE----", lastName);
-        console.log("email  --  SERVOCES SEMD,AILSERVICE----", email)
         const message = emailContact(firstName, lastName, email)
         const gmailOptions = {
             from: config.EMAIL,
