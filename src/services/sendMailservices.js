@@ -12,29 +12,46 @@ const transporter = createTransport({
     debug: true
 });
 
-const emailContact = (firstName, lastName, email) => {
+const messageToCpmpany = (firstName, lastName, email) => {
     return (
         `<h3>${firstName} ${lastName}, quiere adquirir un servicio. Escribile a ${email}</h3>`
     )
 };
 
+const messageToUser = (firstName) => {
+    return (
+        `<h3>¡Hola${firstName}! Gracias por escribirnos. En breve nos comunicaremos con vos.</h3>`
+    )
+};
+
 export const sendMailservice = async (firstName, lastName, email) => {
     try {
-        const message = emailContact(firstName, lastName, email)
-        const gmailOptions = {
+        const messageCompany = messageToCpmpany(firstName, lastName, email)
+        const messageUser = messageToUser(firstName, email)
+        const companyMailOptions = {
             from: config.EMAIL,
             to: 'gamerapodcast@gmail.com',
             subject: `${firstName} se contactó`,
-            html: message
+            html: messageCompany
         };
 
-        const response = await transporter.sendMail(gmailOptions);
+        const userMailOptions = {
+            from: config.EMAIL,
+            to: email, 
+            subject: 'Gracias por contactarte',
+            html: messageUser
+        };
 
-        if (response && response.accepted && response.accepted.length > 0) {
-            console.log("Correo electrónico enviado exitosamente:", response);
+        const [companyResponse, userResponse] = await Promise.all([
+            transporter.sendMail(companyMailOptions),
+            transporter.sendMail(userMailOptions)
+        ]);
+
+        if (companyResponse && companyResponse.accepted && companyResponse.accepted.length > 0 && userResponse && userResponse.accepted && userResponse.accepted.length > 0) {
+            console.log("Correos electrónicos enviados exitosamente.");
             return true;
         } else {
-            console.error("Error al enviar el correo electrónico:", response);
+            console.error("Error al enviar uno o ambos correos electrónicos.");
             return false;
         }
     } catch (error) {
