@@ -18,7 +18,7 @@ app.use(express.static(__dirname));
 app.use('/api', emailRouter);
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile('index.html');
 });
 
 const PORT = config.PORT;
