@@ -1,4 +1,5 @@
 import { createTransport } from "nodemailer";
+import { template } from "./template.js";
 import config from '../config/config.js';
 
 const transporter = createTransport({
@@ -20,8 +21,9 @@ const messageToCpmpany = (firstName, lastName, email) => {
 
 const messageToUser = (firstName) => {
     return (
-        `<h3>¡Hola${firstName}! Gracias por escribirnos. En breve nos comunicaremos con vos.</h3>`
-    )
+        template
+        //`<h3>¡Hola${firstName}! Gracias por escribirnos. En breve nos comunicaremos con vos.</h3>`
+    );
 };
 
 export const sendMailservice = async (firstName, lastName, email) => {
