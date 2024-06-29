@@ -57,7 +57,7 @@ export const template = `<!DOCTYPE html>
                    <table cellpadding="0" cellspacing="0" width="100%">
                     <tbody>
                      <tr>
-                      <td align="center" class="esd-block-image es-p10b" style="font-size: 0px;"><a target="_blank"><img src="../../img/gamera_logo.png" alt="Logo" style="display: block; font-size: 12px;" width="200" title="Logo"></a></td>
+                      <td align="center" class="esd-block-image es-p10b" style="font-size: 0px;"><a target="_blank"><img src="http://85.209.92.30/../../img/gamera_logo.png" alt="Logo" style="display: block; font-size: 12px;" width="200" title="Logo"></a></td>
                      </tr>
                     </tbody>
                    </table></td>
